@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><title>Bokning</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script>
+        function validering() {
+            let medlem = document.forms["form"]["medlemid"].value;
+            if (medlem == ""){
+                alert("skriv medlemsid");
+                return false;
+            }
+        }
+     </script>
+
+</head>
+
+<body>
+
+ <h1>Bokning</h1>
+<p> Skriv in ditt medlemsid och välj sedan vad du vill boka.</p>
+<form name="form" onsubmit="return validering()" method="post" >
+    <label for="medlemsnr">Medlemsid</label><br>
+    <input type="text" id="Medlemsid" name="medlemid"><br>
+    <br>
+
+<input type="checkbox" id="bana" name="bana" value="bana">
+   <label for="bana">Bana</label><br>
+   <input type="checkbox" id="bastu" name="bastu" value="basta">
+   <label for="basta">Bastu</label><br>
+    <input type="checkbox" id="omklädning" name="omkädning" value="omklädnig">
+<label for="omklädning">Omklädningrum</label><br>
+<br><br>
+
+<input type="submit" value="submit">
+</form>
+
+   
+</body>
+</html>
+
+    

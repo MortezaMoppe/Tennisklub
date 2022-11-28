@@ -213,7 +213,8 @@ header .search-bar-container label:hover{
     }
 }
 @media (max-width:991px){
-    header {padding: 2rem;
+    header {
+        padding: 2rem;
     }
 }
 @media (max-width:768px){
@@ -225,8 +226,15 @@ header .search-bar-container label:hover{
         top: 100%;
         right: 0;
         left: 0;
-        background: var(--nav);
-        border-top: .1rem solid rgba(100, 18, 18, 0.2);
+        background: rgb(83, 137, 146);
+        border-top: .2rem solid rgba(100, 18, 18, 0.2);
         padding: .1rem 2rem;
+    }
+    header .navbar a{
+        display: block;
+        border-radius: .5rem;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        background: var(--nav);
     }
 }

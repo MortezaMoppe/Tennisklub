@@ -1,9 +1,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
+
+/*colors*/
 :root {
     --markhov:#65a2e3;
     --nav:rgb(45, 96, 109);
+    --bkr:rgb(83, 137, 146);
+    --solid:rgba(100, 18, 18, 0.2);
 }
 
 
@@ -31,21 +35,28 @@ html {
     scroll-padding-top: 6rem;
     scroll-behavior: smooth;
 }
+
+section{
+    padding: 2rem 9%;
+}
+
 .btn{
     display: inline-block;
     margin-top: 1rem;
     background: var(--nav);
     color: beige;
     padding: .8rem 3rem;
-    border: .2rem solid var(--markhov);
+    border: .2rem solid var(--bkr);
     cursor: pointer;
     font-size: 1.6rem;
     border-radius: 1.5rem; 
 }
 .btn:hover{
-    background:var(--markhov);
+    background:var(--bkr);
     color:black;
 }
+
+/*head-navbar-icons*/
 header{
     position: fixed;
     top: 0;
@@ -65,7 +76,7 @@ header .navbar a{
     margin: .8rem;
 }
 header .navbar a:hover{
-    color:var(--markhov);
+    color:var(--bkr);
 }
 header .icons i{
     font-size: 2.5rem;
@@ -74,7 +85,7 @@ header .icons i{
     margin-right: 2rem;
 }
 header .icons i:hover{
-    color: var(--markhov);
+    color: var(--bkr);
 }
 header .search-bar-container{
     position: absolute;
@@ -108,9 +119,10 @@ header .search-bar-container label{
     margin-left: 1.5rem;
 }
 header .search-bar-container label:hover{
-    color: var(--markhov);
+    color: var(--bkr);
 }
 
+/*login*/
 .login-form-container{
     position:fixed;
     top:-120%;
@@ -118,7 +130,7 @@ header .search-bar-container label:hover{
     z-index: 10000;
     min-height: 100vh;
     width: 100%;
-    background: rgba(100, 18, 18, 0.2);
+    background: var(--solid);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,9 +143,9 @@ header .search-bar-container label:hover{
 .login-form-container form{
     margin: 2rem;
     padding: 1.5rem 2rem;
-    border-radius: 4rem;
-    background:var(--nav) ;
-    width: 50rem;
+    border-radius:3rem;
+    background:var(--nav);
+    width: 35rem;
 }
 
 .login-form-container form h3{
@@ -146,10 +158,10 @@ header .search-bar-container label:hover{
  .login-form-container form .box{
     width: 100%;
     padding: 1rem 0;
-    font-size: 1.7rem;
-    color: var(--nav);
+    font-size: 1.6rem;
+    color: var(--bkr);
     margin:.6rem 0;
-    border: .1rem solid rgba(100, 18, 18, 0.2);
+    border: .2rem solid rgba(100, 18, 18, 0.2);
     text-transform: none;
 }
 .login-form-container form .box:focus{
@@ -194,12 +206,40 @@ header .search-bar-container label:hover{
     cursor: pointer;
     display: none;
 }
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+}
+.home .content{
+    text-align: center;
+}
+.home .content h3{
+    font-size: 2.5rem;
+    color: beige;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem var(--bkr);
+}
 
+.home .content p{
+    font-size: 1.5rem;
+    color:beige;
+    padding: 0;
+}
+.home .video-container video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 
-
-
-
-
+}
 
 
 
@@ -226,9 +266,13 @@ header .search-bar-container label:hover{
         top: 100%;
         right: 0;
         left: 0;
-        background: rgb(83, 137, 146);
+        background: var(--bkr);
         border-top: .2rem solid rgba(100, 18, 18, 0.2);
         padding: .1rem 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0 );
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100% );
     }
     header .navbar a{
         display: block;
@@ -236,5 +280,10 @@ header .search-bar-container label:hover{
         padding: 1.5rem;
         margin: 1.5rem 0;
         background: var(--nav);
+    }
+}
+@media (max-width:450px){
+    html {
+        font: size 50%;  
     }
 }

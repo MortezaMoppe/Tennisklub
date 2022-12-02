@@ -20,7 +20,6 @@ menu.addEventListener('click', ()=>{
     navbar.classList.toggle('active');
 });
 
-
 searchBtn.addEventListener('click', ()=>{
     searchBtn.classList.toggle('fa-times');
     searchBar.classList.toggle('active');

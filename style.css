@@ -63,7 +63,7 @@ header{
     left: 0;
     right: 0;
     background: var(--nav);
-    z-index: 1000;
+    z-index: 10000;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -72,7 +72,7 @@ header{
 
 header .navbar a{
     color: beige;
-    font-size: 2rem;
+    font-size: 1.9rem;
     margin: .8rem;
 }
 header .navbar a:hover{
@@ -238,7 +238,6 @@ header .search-bar-container label:hover{
     height: 100%;
     width: 100%;
     object-fit: cover;
-
 }
 
 
@@ -254,6 +253,9 @@ header .search-bar-container label:hover{
 }
 @media (max-width:991px){
     header {
+        padding: 2rem;
+    }
+    section {
         padding: 2rem;
     }
 }

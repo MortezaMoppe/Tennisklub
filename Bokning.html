@@ -5,37 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-    <script>
-        function validering() {
-            let medlem = document.forms["form"]["medlemid"].value;
-            if (medlem == ""){
-                alert("skriv medlemsid");
-                return false;
-            }
-        }
-     </script>
+    
+<!--font webpage-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!--css-->
+<link rel="stylesheet" href="style.css">
 
 </head>
+<body class="bodyBkrnd">
+<!--header navbar search-->
+<header>
+<div id="menu-bar" class="fas fa-bars"></div>
 
-<body>
+<nav class="navbar">
+<a href="index.html">hem</a>
+<a href="#galleri">Galleri</a>
+<a href="#info">information</a>
+<a href="Bokning.html">Bokning</a>
+</nav>
 
- <h1>Bokning</h1>
-<p> Skriv in ditt medlemsid och välj sedan vad du vill boka.</p>
-<form name="form" onsubmit="return validering()" method="post" >
-    <label for="medlemsnr">Medlemsid</label><br>
-    <input type="text" id="Medlemsid" name="medlemid"><br>
-    <br>
+<div class="icons">
+<i class="fas fa-search" id="search-btn"></i>
+<i class="fas fa-user" id="login-btn"></i>
+</Div>
+<form action="" class="search-bar-container">
+<input type="search" id="search-bar" placeholder="Sök">
+<label for="search-bar" class="fas fa-search"></label>
+</form>   
+</header>  
 
-<input type="checkbox" id="bana" name="bana" value="bana">
-   <label for="bana">Bana</label><br>
-   <input type="checkbox" id="bastu" name="bastu" value="basta">
-   <label for="basta">Bastu</label><br>
-    <input type="checkbox" id="omklädning" name="omkädning" value="omklädnig">
-<label for="omklädning">Omklädningrum</label><br>
-<br><br>
+<!--login form-->
 
-<input type="submit" value="submit">
+<div class="login-form-container">
+<form action="">
+    <i class="fas fa-times" id="form-close"></i>
+    <h3>Logga in</h3>
+    <input type="email" class="box" placeholder="mail adress">
+    <input type="password" class="box" placeholder="lösenord">
+    <input type="submit" value="logga in" class="btn">
+    <input type="checkbox" id="remember" checked>
+    <label for="remember">kom ihåg mig</label>
+    <p>glömt lösenord?<a href="#">klicka här</a></p>
+    <P><a href="#">ny medlem</a></P>
 </form>
+</div>
+
+
+ 
+ <section class="boking" id="boking">
+
+<!--bokning form-->
+<div class="book-container">
+    <form action="" class="mango">
+        <div class="inputs" id="booker">
+            <h3>välj vad du vill boka</h3>
+            <input type="checkbox"> <label for="bana">Bana</label><br>
+            <input type="checkbox"> <label for="bana">bastu</label><br>
+            <input type="checkbox"> <label for="bana">omklädningrum dam</label><br>
+            <input type="checkbox"> <label for="bana">omklädningrum herr</label><br><br>
+            <h3>välj datum</h3>
+            <input type="date">
+            <input type="time">
+
+            <button class="bkrft" onclick="">bekräfta</button>
+        </div>
+    </form>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- javasrcript-->
+<script src="hem.js"></script>
+<script src="boking.js"></script>
 
    
 </body>

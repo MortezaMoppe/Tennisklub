@@ -240,6 +240,62 @@ header .search-bar-container label:hover{
     object-fit: cover;
 }
 
+/*booking*/
+.bodyBkrnd{
+    background-image: url(img/img3.jpg);
+    background-size: 100%;
+    background-position: absolute;
+    background-repeat: none;
+}
+
+.boking .book-container{
+    background-color:  var(--nav);
+    height: 20rem;
+    width: 45rem;
+    margin: auto;
+    margin-top: 10rem;
+    box-shadow: .1rem .5rem .9rem beige;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    
+    
+}
+
+.boking .book-container label{
+    color: bisque;
+    text-shadow: .1rem .2rem .5rem #333;
+}
+
+.bkrft {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--nav);
+    color: beige;
+    padding: .8rem 3rem;
+    border: .2rem solid var(--bkr);
+    cursor: pointer;
+    font-size: 1.6rem;
+    border-radius: 1.5rem; 
+}
+.bkrft:hover{
+    background:var(--bkr);
+    color:black;
+}
+.boking .book-container .inputs h3{
+    color: bisque;
+    text-transform: uppercase;
+    text-shadow: .1rem .2rem .5rem #333;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -284,8 +340,14 @@ header .search-bar-container label:hover{
         background: var(--nav);
     }
 }
+
 @media (max-width:450px){
     html {
-        font: size 50%;  
+        font-size: 50%;  
     }
+    /*boking */
+    .heading span{
+        font-size: 2.5rem;
+    }
+    .
 }

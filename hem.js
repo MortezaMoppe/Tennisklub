@@ -32,3 +32,13 @@ formBtn.addEventListener('click', ()=>{
 formClose.addEventListener('click', ()=>{
     loginForm.classList.remove('active');
 });
+
+
+// Validering för bokning
+function validering() {
+    let medlem = document.forms["form"]["medlemid"].value;
+    if (medlem == ""){
+        alert("Logga in för att kunna boka");
+        return false;
+    }
+}

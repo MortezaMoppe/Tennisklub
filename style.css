@@ -1,18 +1,17 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
 
 /*colors*/
 :root {
-    --markhov:#65a2e3;
-    --nav:rgb(45, 96, 109);
-    --bkr:rgb(83, 137, 146);
-    --solid:rgba(100, 18, 18, 0.2);
+    --markhov: #65a2e3;
+    --nav: rgb(45, 96, 109);
+    --bkr: rgb(83, 137, 146);
+    --solid: rgba(100, 18, 18, 0.2);
 }
 
 
 
-*{
+* {
     font-family: 'Nunito Sans', sans-serif;
     margin: 0;
     padding: 0;
@@ -24,8 +23,8 @@
     transition: all .2s linear;
 }
 
-*::selection{
-    background:var(--markhov);
+*::selection {
+    background: var(--markhov);
     color: #fff;
 }
 
@@ -36,11 +35,11 @@ html {
     scroll-behavior: smooth;
 }
 
-section{
+section {
     padding: 2rem 9%;
 }
 
-.btn{
+.btn {
     display: inline-block;
     margin-top: 1rem;
     background: var(--nav);
@@ -49,15 +48,16 @@ section{
     border: .2rem solid var(--bkr);
     cursor: pointer;
     font-size: 1.6rem;
-    border-radius: 1.5rem; 
+    border-radius: 1.5rem;
 }
-.btn:hover{
-    background:var(--bkr);
-    color:black;
+
+.btn:hover {
+    background: var(--bkr);
+    color: black;
 }
 
 /*head-navbar-icons*/
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -70,41 +70,46 @@ header{
     padding: 1rem 9%;
 }
 
-header .navbar a{
+header .navbar a {
     color: beige;
     font-size: 1.9rem;
     margin: .8rem;
 }
-header .navbar a:hover{
-    color:var(--bkr);
+
+header .navbar a:hover {
+    color: var(--bkr);
 }
-header .icons i{
+
+header .icons i {
     font-size: 2.5rem;
     color: beige;
     cursor: pointer;
     margin-right: 2rem;
 }
-header .icons i:hover{
+
+header .icons i:hover {
     color: var(--bkr);
 }
-header .search-bar-container{
+
+header .search-bar-container {
     position: absolute;
     top: 100%;
-    left:0;
+    left: 0;
     right: 0;
-    padding:.8rem 1rem;
+    padding: .8rem 1rem;
     background: var(--nav);
     border-top: .1rem solid rgba(100, 18, 18, 0.2);
     display: flex;
     align-items: center;
     z-index: 1001;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0 );
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
-header .search-bar-container.active{
+
+header .search-bar-container.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-header .search-bar-container #search-bar{ 
+header .search-bar-container #search-bar {
     width: 100%;
     padding: 0.7rem;
     text-transform: none;
@@ -112,20 +117,22 @@ header .search-bar-container #search-bar{
     font-size: 1rem;
     border-radius: 0.5rem;
 }
-header .search-bar-container label{
+
+header .search-bar-container label {
     color: beige;
     cursor: pointer;
     font-size: 3rem;
     margin-left: 1.5rem;
 }
-header .search-bar-container label:hover{
+
+header .search-bar-container label:hover {
     color: var(--bkr);
 }
 
 /*login*/
-.login-form-container{
-    position:fixed;
-    top:-120%;
+.login-form-container {
+    position: fixed;
+    top: -120%;
     left: 0;
     z-index: 10000;
     min-height: 100vh;
@@ -136,67 +143,77 @@ header .search-bar-container label:hover{
     justify-content: center;
 }
 
-.login-form-container.active{
-    top:0;
+.login-form-container.active {
+    top: 0;
 }
 
-.login-form-container form{
+.login-form-container form {
     margin: 2rem;
     padding: 1.5rem 2rem;
-    border-radius:3rem;
-    background:var(--nav);
+    border-radius: 3rem;
+    background: var(--nav);
     width: 35rem;
 }
 
-.login-form-container form h3{
+.login-form-container form h3 {
     font-size: 3rem;
     color: beige;
     text-transform: uppercase;
     text-align: center;
     padding: 1rem 0;
 }
- .login-form-container form .box{
+
+.login-form-container form .box {
     width: 100%;
     padding: 1rem 0;
     font-size: 1.6rem;
     color: var(--bkr);
-    margin:.6rem 0;
+    margin: .6rem 0;
     border: .2rem solid rgba(100, 18, 18, 0.2);
     text-transform: none;
 }
-.login-form-container form .box:focus{
+
+.login-form-container form .box:focus {
     border-color: var(--markhov);
 }
-.login-form-container form #remember{
+
+.login-form-container form #remember {
     margin: 2rem, 0;
 }
-.login-form-container form label{
+
+.login-form-container form label {
     font-size: 1rem;
 }
-.login-form-container form .btn{
+
+.login-form-container form .btn {
     display: block;
     width: 100%;
 }
-.login-form-container form p{
+
+.login-form-container form p {
     padding: .5rem 0;
     font-size: 1.2rem;
     color: beige;
 }
-.login-form-container form p a{
+
+.login-form-container form p a {
     color: var(--markhov);
 }
-.login-form-container form p a:hover{
-    color:rgba(82, 19, 19, 0.719);
+
+.login-form-container form p a:hover {
+    color: rgba(82, 19, 19, 0.719);
     text-decoration: underline;
 }
-.login-form-container #form-close{
+
+.login-form-container #form-close {
     position: absolute;
     top: 2rem;
-    right:3rem;
+    right: 3rem;
     font-size: 3rem;
-    color:beige;
+    color: beige;
     cursor: pointer;
 }
+
 #menu-bar {
     color: beige;
     border: .1rem solid beige;
@@ -206,6 +223,7 @@ header .search-bar-container label:hover{
     cursor: pointer;
     display: none;
 }
+
 .home {
     min-height: 100vh;
     display: flex;
@@ -215,22 +233,25 @@ header .search-bar-container label:hover{
     position: relative;
     z-index: 0;
 }
-.home .content{
+
+.home .content {
     text-align: center;
 }
-.home .content h3{
+
+.home .content h3 {
     font-size: 2.5rem;
     color: beige;
     text-transform: uppercase;
     text-shadow: 0 .3rem .5rem var(--bkr);
 }
 
-.home .content p{
+.home .content p {
     font-size: 1.5rem;
-    color:beige;
+    color: beige;
     padding: 0;
 }
-.home .video-container video{
+
+.home .video-container video {
     position: absolute;
     top: 0;
     left: 0;
@@ -241,11 +262,13 @@ header .search-bar-container label:hover{
 }
 
 /*booking*/
-.bodyBkrnd{
+.bodyBkrnd {
     background-image: url(img/img3.jpg);
-    background-size: 100%; 
-    background-repeat: no-repeat;   
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 /*
 .img-container{
     position: absolute;
@@ -257,9 +280,9 @@ header .search-bar-container label:hover{
     object-fit: cover;
 }*/
 
- .book-container{
-    background-color:  var(--nav);
-    height: 20rem;
+.book-container {
+    background-color: var(--nav);
+    height: 25rem;
     width: 44rem;
     margin: auto;
     margin-top: 10rem;
@@ -269,11 +292,12 @@ header .search-bar-container label:hover{
     opacity: .9;
 }
 
- .book-container label{
+.book-container label {
     color: bisque;
     text-shadow: .1rem .2rem .5rem #333;
 }
- .book-container form .btn{
+
+.book-container form .btn {
     display: block;
     width: 80%;
     position: relative;
@@ -281,7 +305,7 @@ header .search-bar-container label:hover{
     bottom: 4rem;
 }
 
-.book-container .bbox{
+.book-container .bbox {
     width: 50%;
     margin: .6rem 0;
     padding: 1rem 0;
@@ -289,25 +313,45 @@ header .search-bar-container label:hover{
     color: var(--bkr);
     border: .2rem solid rgba(100, 18, 18, 0.2);
     text-transform: none;
-    height:3rem;
+    height: 3rem;
     position: relative;
     left: 18rem;
     top: 1rem;
- 
+
 }
 
-.book-container  h3{
+.book-container h3 {
     color: bisque;
     text-transform: uppercase;
     text-shadow: .1rem .2rem .5rem #333;
     /*text-align: center;*/
 }
+
 .book-container .check-box {
     position: relative;
     bottom: 6rem;
     width: 13rem;
 }
 
+.book-container .d {
+    position: relative;
+    bottom: 5.5rem;
+    color: bisque;
+    text-shadow: .1rem .2rem .5rem #333;
+}
+
+.book-container .date {
+    position: relative;
+    bottom: 5rem;
+    width: 30%;
+    margin: .6rem 0;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: var(--bkr);
+    border: .2rem solid rgba(100, 18, 18, 0.2);
+    text-transform: none;
+    height: 2rem;
+}
 
 
 
@@ -325,24 +369,28 @@ header .search-bar-container label:hover{
 
 /*media*/
 
-@media (max-width:1200px){
+@media (max-width:1200px) {
     html {
-        font: size 55%;  
+        font: size 55%;
     }
 }
-@media (max-width:991px){
+
+@media (max-width:991px) {
     header {
         padding: 2rem;
     }
+
     section {
         padding: 2rem;
     }
 }
-@media (max-width:768px){
-    #menu-bar{
+
+@media (max-width:768px) {
+    #menu-bar {
         display: initial;
     }
-    header .navbar{ 
+
+    header .navbar {
         position: absolute;
         top: 100%;
         right: 0;
@@ -350,12 +398,14 @@ header .search-bar-container label:hover{
         background: var(--bkr);
         border-top: .2rem solid rgba(100, 18, 18, 0.2);
         padding: .1rem 2rem;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0 );
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
-    header .navbar.active{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100% );
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
-    header .navbar a{
+
+    header .navbar a {
         display: block;
         border-radius: .5rem;
         padding: 1.5rem;
@@ -364,21 +414,21 @@ header .search-bar-container label:hover{
     }
 }
 
-@media (max-width:450px){
+@media (max-width:450px) {
     html {
-        font-size: 50%;  
+        font-size: 50%;
     }
+
     /*boking */
-    .heading span{
+    .heading span {
         font-size: 2.5rem;
     }
 }
 
 @media (max-width: 940px) {
-    .bodyBkrnd{
+    .bodyBkrnd {
         background-image: url(img/bkng.jpg);
-        background-size: 100%; 
-        background-repeat: no-repeat;   
+        background-size: cover 100%;
+        background-repeat: no-repeat;
     }
 }
-

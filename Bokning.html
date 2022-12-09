@@ -1,93 +1,96 @@
 <!DOCTYPE html>
 <html>
-<head><title>Bokning</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    
-<!--font webpage-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <head>
+    <title>Bokning</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!--css-->
-<link rel="stylesheet" href="style.css">
+    <!--font webpage-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
-</head>
-<body class="bodyBkrnd">
-<!--header navbar search-->
-<header>
-<div id="menu-bar" class="fas fa-bars"></div>
+    <!--css-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bodyBkrnd">
+    <!--header navbar search-->
+    <header>
+      <div id="menu-bar" class="fas fa-bars"></div>
 
-<nav class="navbar">
-<a href="index.html">hem</a>
-<a href="#galleri">Galleri</a>
-<a href="#info">information</a>
-<a href="Bokning.html">Bokning</a>
-</nav>
+      <nav class="navbar">
+        <a href="index.html">hem</a>
+        <a href="#galleri">Galleri</a>
+        <a href="#info">information</a>
+        <a href="Bokning.html">Bokning</a>
+      </nav>
 
-<div class="icons">
-<i class="fas fa-search" id="search-btn"></i>
-<i class="fas fa-user" id="login-btn"></i>
-</Div>
-<form action="" class="search-bar-container">
-<input type="search" id="search-bar" placeholder="Sök">
-<label for="search-bar" class="fas fa-search"></label>
-</form>   
-</header>  
+      <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+      </div>
+      <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="Sök" />
+        <label for="search-bar" class="fas fa-search"></label>
+      </form>
+    </header>
 
-<!--login form-->
+    <!--login form-->
 
-<div class="login-form-container">
-<form action="">
-    <i class="fas fa-times" id="form-close"></i>
-    <h3>Logga in</h3>
-    <input type="email" class="box" placeholder="mail adress">
-    <input type="password" class="box" placeholder="lösenord">
-    <input type="submit" value="logga in" class="btn">
-    <input type="checkbox" id="remember">
-    <label for="remember">kom ihåg mig</label>
-    <p>glömt lösenord?<a href="#">klicka här</a></p>
-    <P><a href="#">ny medlem</a></P>
-</form>
-</div>
+    <div class="login-form-container">
+      <form action="" name="loginFormIcon" onsubmit="return validering()">
+        <i class="fas fa-times" id="form-close"></i>
+        <h3>Logga in</h3>
+        <input
+          type="email"
+          class="box"
+          name="loginUser"
+          placeholder="mail adress"
+        />
+        <input
+          type="password"
+          class="box"
+          name="loginUser"
+          placeholder="lösenord"
+        />
 
-<!-- 
+        <input type="submit" class="btn" value="Logga In" />
+        <input type="checkbox" id="remember" />
+        <label for="remember">kom ihåg mig</label>
+        <p>glömt lösenord?<a href="#">klicka här</a></p>
+        <p><a href="/signup.html">ny medlem</a></p>
+      </form>
+    </div>
+
+    <!-- 
 <div class="boking">
    <div class="img-container">
         <img src="/img/img3.jpg" alt="">
     </div>-->
-<div class="book-container">
-    <form action="">
-            <h3>välj vad du vill boka</h3>
-                <input type="email" class="bbox" placeholder="mejladdress"><br>
-                <input type="password" class="bbox" placeholder="lösenord">    
+    <div class="book-container">
+      <form action="">
+        <h3>välj vad du vill boka</h3>
+        <input type="email" class="bbox" placeholder="mejladdress" /><br />
+        <input type="password" class="bbox" placeholder="lösenord" />
         <div class="check-box">
-            <input type="checkbox"> <label for="bana">Bana</label><br>
-            <input type="checkbox"> <label for="bastu">bastu</label><br>
-            <input type="checkbox"> <label for="omklddam">omklädningrum dam</label><br>
-            <input type="checkbox"> <label for="omkldherr">omklädningrum herr</label><br>
+          <input type="checkbox" /> <label for="bana">Bana</label><br />
+          <input type="checkbox" /> <label for="bastu">bastu</label><br />
+          <input type="checkbox" />
+          <label for="omklddam">omklädningrum dam</label><br />
+          <input type="checkbox" />
+          <label for="omkldherr">omklädningrum herr</label><br />
         </div>
-              
-            <button class="btn" onclick="">bekräfta</button>
-    </form>
-</div>
-<!--</div>-->
+        <h4 class="d">välj datum</h4>
+        <input type="date" class="date" />
 
+        <button class="btn" onclick="">bekräfta</button>
+      </form>
+    </div>
+    <!--</div>-->
 
-
-
-
-
-
-
-
-
-<!-- javasrcript-->
-<script src="hem.js"></script>
-<script src="boking.js"></script>
-
-   
-</body>
+    <!-- javasrcript-->
+    <script src="hem.js"></script>
+  </body>
 </html>
-
-    

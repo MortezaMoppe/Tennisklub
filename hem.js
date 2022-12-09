@@ -35,10 +35,12 @@ formClose.addEventListener('click', ()=>{
 
 
 // Validering för bokning
+
 function validering() {
-    let medlem = document.forms["form"]["medlemid"].value;
-    if (medlem == ""){
-        alert("Logga in för att kunna boka");
+
+    let medlem = document.forms["loginFormIcon"]["loginUser"].value;
+    if (medlem === ""){
+        alert("Fyll i alla rutor");
         return false;
     }
-}
+};
